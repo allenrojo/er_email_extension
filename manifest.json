@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Email Sent",
+    "version": "1.1",
+    "description": "An Elden Ring style title card when you send an email",
+    "permissions": ["scripting", "activeTab"],
+    "content_scripts": [
+    {
+        "matches": ["*://mail.google.com/*"],
+        "js": ["content.js"],
+        "css": ["content.css"]
+    }
+    ],
+    "web_accessible_resources": [
+  {
+    "resources": ["elden_ring_sfx.mp3"],
+    "matches": ["*://mail.google.com/*"]
+  }
+]
+
+}
